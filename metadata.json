@@ -1,0 +1,5 @@
+{
+  "name": "Claims Assistant",
+  "description": "An AI-powered claims inventory form that helps customers document lost items and estimates their Actual Cash Value (ACV) using current market prices.",
+  "requestFramePermissions": []
+}
