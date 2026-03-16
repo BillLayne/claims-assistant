@@ -9,6 +9,8 @@
 const GEMINI_BASE = 'https://generativelanguage.googleapis.com/v1beta/models';
 const ALLOWED_ORIGINS = [
   'https://billlayne.github.io',
+  'https://www.billlayneinsurance.com',
+  'https://billlayneinsurance.com',
   'http://localhost:3000',
   'http://localhost:8092',
   'http://127.0.0.1:3000',
