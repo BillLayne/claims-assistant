@@ -121,7 +121,7 @@ Extract or estimate the following details for an insurance claim inventory:
     }
   };
 
-  const result = await callGemini('gemini-2.0-flash', payload, env.GEMINI_API_KEY);
+  const result = await callGemini('gemini-2.5-flash', payload, env.GEMINI_API_KEY);
   const text = result.candidates?.[0]?.content?.parts?.[0]?.text || '{}';
 
   return new Response(text, {
@@ -160,7 +160,6 @@ Return a JSON array of objects. Each object MUST have:
 
   const payload = {
     contents: [{ parts }],
-    tools: [{ googleSearch: {} }],
     generationConfig: {
       responseMimeType: 'application/json',
       responseSchema: {
@@ -179,7 +178,7 @@ Return a JSON array of objects. Each object MUST have:
     }
   };
 
-  const result = await callGemini('gemini-2.0-flash', payload, env.GEMINI_API_KEY);
+  const result = await callGemini('gemini-2.5-flash', payload, env.GEMINI_API_KEY);
   const text = result.candidates?.[0]?.content?.parts?.[0]?.text || '[]';
   const estimates = JSON.parse(text);
 
